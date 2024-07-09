@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="!scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <style>
+        .shade{
+            background: radial-gradient(400px at 869px 595px, rgba(29, 78, 216, 0.15), transparent 80%);
+            
+        }
+
+        #details a.active {
+            color: white;
+            transform: scale(1.1);
+        }
+        
+    </style>
+</head>
+
+<body class="bg-slate-900  ">
+    <div class=" shade  pointer-events-none absolute inset-0 z-auto"></div>
+    <div class="flex mx-80 px-10 py-0 justify-between gap-10">
+        <div id="header" class="w-96 fixed py-24 ">
+            <h1 class="text-slate-200 text-5xl font-bold ">Vaibhav Saini</h1>
+            <h3 class="text-slate-400 text-2xl font-bold mx-2 mt-2"><span class="hover:text-emerald-600">Frontend</span>
+                <span class="hover:text-emerald-600">Developer</span>
+            </h3>
+            <h3 class="text-slate-500 text-1xl font-bold mx-2 mt-5">I build for best user experience, pixel-perfect.
+            </h3>
+
+            <ul id="details" class="mt-56  ">
+                <li>
+                    <a href="#About" class="active About-link flex gap-3 text-slate-400 transition-all hover:duration-500 hover:text-white hover:scale-110 focus-visible:scale-110 focus-visible:text-white ">
+                        <img class="w-7 mt-1  " src="/Icons/icons8-dash-50.png" alt="">
+                        <h1 class=" mt-1 ">About</h1>
+                    </a>
+
+                </li>
+
+                <li>
+                    <a href="#Experience" class=" Experience-link flex gap-3 text-slate-400 transition-all hover:duration-500 hover:text-white hover:scale-110 focus-visible:scale-110 focus-visible:text-white">
+                        <img class="w-7 mt-1  " src="/Icons/icons8-dash-50.png" alt="">
+                        <h1 class=" mt-1 ">Experience</h1>
+                    </a>
+
+                </li>
+
+                <li>
+                    <a href="#Projects" class=" project-link flex gap-3 text-slate-400 transition-all hover:duration-500 hover:text-white hover:scale-110 focus-visible:scale-110 focus-visible:text-white">
+                        <img class="w-7 mt-1  " src="/Icons/icons8-dash-50.png" alt="">
+                        <h1 class=" mt-1 ">Projects</h1>
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <div id="contacts" class="mt-72">
+                <ul class="flex gap-4   cursor-pointer">
+                    <li class=" hover:bg-emerald-600 rounded-full ">
+                        <a href=""><img class="w-10" src="/Icons/107149_gray_circle_linkedin_icon.png" alt=""></a>
+
+                    </li>
+                    <li class=" hover:bg-white rounded-full">
+                        <img class="w-10" src="/Icons/icone-github-grise.png" alt="">
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+
+        <main id="content" class=" w-5/6 ml-96 pl-60 py-24">
+            <section id="About" class=" text-slate-400 hover:bg-slate-800/50 rounded-lg mb-32 scroll-mt-24 ">
+
+
+                <p class="py-3 px-3">
+                    I am Vaibhav, a third-year student at SRM University Sonipat, Delhi NCR. I am passionate about
+                    delving
+                    into complexity, much like a skilled coder. I am proficient in<b>Javascript, HTML, and CSS</b> for
+                    frontend
+                    development, and I am currently expanding my skills by learning Node.js for backend development. In
+                    terms of Data Structures and Algorithms (DSA), I am knowledgeable in C++ and Python.
+                </p>
+
+
+
+                <p class="py-3 px-3">
+                    This website is a testament to my skills as a frontend developer. I have designed this website from
+                    scratch, and I have used <b>HTML, CSS, and Tailwind CSS</b> to create this website. I have also used
+                    <b>JavaScript</b> to make this website interactive.
+                </p>
+
+                <p class="py-3 px-3">
+                    Currently I am learning Backend Development using <b>Node.js</b> and <b>Express.js</b>. I am also
+                    learning <b>React.js</b> for frontend development.
+                </p>
+
+
+            </section>
+
+            <hr class="mb-2 opacity-20">
+
+            <section id="Experience" class=" text-slate-400  mb-32 scroll-mt-24">
+
+                <div class=" hover:bg-slate-800/50 px-3 py-3 cursor-pointer rounded-lg">
+                    <div class="flex gap-5  mb-5  ">
+                        <h4 class="text-sm w-4/5 mt-1">July 2024 - Present</h4>
+                        <p class=" text-sm mx-5 "><b class="hover:text-emerald-600 text-lg">STUDENT at
+                                Internshala</b><br> <br>I am currently
+                            taking training from Intershalaa as a Full Stack Developer where I am learning MERN stack
+                            and
+                            building projects using MERN stack. I am also learning Data Structures and Algorithms using
+                            JavaScript.
+                        </p>
+
+                    </div>
+                    <ul class="text-sm text-emerald-600 flex gap-3 mx-40">
+                        <li>
+                            <h6 class="bg-slate-800/50 px-2 py-2 rounded-lg">Javascript</h6>
+                        </li>
+                        <li>
+                            <h4 class="bg-slate-800/50 px-2 py-2 rounded-lg">HTML</h4>
+                        </li>
+                        <li>
+                            <h4 class="bg-slate-800/50 px-2 py-2 rounded-lg">CSS</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class=" hover:bg-slate-800/50 px-3 py-3 cursor-pointer rounded-lg">
+                    <div class="flex gap-5  mb-5  ">
+                        <h4 class="text-sm w-4/5 mt-1">July 2023 - July 2024</h4>
+                        <p class=" text-sm mx-5 "><b class="hover:text-emerald-600 text-lg">STUDENT at
+                                Internshala</b><br> <br>I am currently
+                            taking training from Intershalaa as a Full Stack Developer where I am learning MERN stack
+                            and
+                            building projects using MERN stack. I am also learning Data Structures and Algorithms using
+                            JavaScript.
+                        </p>
+
+                    </div>
+                    <ul class="text-sm text-emerald-600 flex gap-3 mx-40">
+                        <li>
+                            <h6 class="bg-slate-800/50 px-2 py-2 rounded-lg">Javascript</h6>
+                        </li>
+                        <li>
+                            <h4 class="bg-slate-800/50 px-2 py-2 rounded-lg">HTML</h4>
+                        </li>
+                        <li>
+                            <h4 class="bg-slate-800/50 px-2 py-2 rounded-lg">CSS</h4>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </section>
+
+            <hr class="mb-2 opacity-20">
+
+            <section id="Projects" class="scroll-mt-24">
+
+                <a href="">
+                    <div class="flex gap-5 text-slate-400  mb-5 hover:bg-slate-800/50 py-3 px-3 ">
+                        <img class="w-25 h-20" src="/Icons/Screenshot 2024-05-13 210540.png" alt="">
+                        <div>
+                            <h1 class="mb-3 text-xl font-bold hover:text-emerald-600">Hueit</h1>
+                            <p>
+                                Hey everyone! I hope you're all doing well. During my second year, I was tasked with
+                                developing a website for a college project. It was an excellent opportunity for me to
+                                expand my knowledge of JavaScript, which I was eager to learn. We named the website
+                                Hueit - Helpful, Useful, and Easy. It's a platform that hosts various useful
+                                applications, making them easily accessible in one place.
+                                <br>
+                                <br>
+
+                                At the moment, we have two applications available:
+                                <br>
+                                <b>- QR Code Generator</b><br>
+                                <b>- Morse Code Generator</b>
+                        </div>
+                    </div>
+
+                </a>
+
+                <a href="">
+                    <div class="flex gap-5 text-slate-400  mb-5 hover:bg-slate-800/50 py-3 px-3 ">
+                        <img class="w-25 h-20" src="/Icons/Screenshot 2024-05-13 210540.png" alt="">
+                        <div>
+                            <h1 class="mb-3 text-xl font-bold hover:text-emerald-600">Hueit</h1>
+                            <p>
+                                Hey everyone! I hope you're all doing well. During my second year, I was tasked with
+                                developing a website for a college project. It was an excellent opportunity for me to
+                                expand my knowledge of JavaScript, which I was eager to learn. We named the website
+                                Hueit - Helpful, Useful, and Easy. It's a platform that hosts various useful
+                                applications, making them easily accessible in one place.
+                                <br>
+                                <br>
+
+                                At the moment, we have two applications available:
+                                <br>
+                                <b>- QR Code Generator</b><br>
+                                <b>- Morse Code Generator</b>
+                        </div>
+                    </div>
+
+                </a>
+        </main>
+    </div>
+
+    
+
+
+
+
+    <script src="/index.js"></script>
+
+
+
+
+
+</body>
+
+</html>
