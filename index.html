@@ -24,6 +24,14 @@
             color: white;
             transform: scale(1.1);
         }
+
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+          }
+          .fade-in-visible {
+            opacity: 1;
+          }
     </style>
 </head>
 
@@ -132,7 +140,7 @@
         <main id="content"
             class="  mt-10  ml-30 lg:ml-60 lg:pl-44 sm:mr-2 md:mr-2 sm:ml-2 xl:ml-60 xl:pl-80 py-10 2xl:ml-60 2xl:pl-80">
             <section id="About"
-                class=" lg:text-basic  xl:text-lg text-slate-400 hover:bg-slate-800/50 rounded-lg mb-32 scroll-mt-24 lg:scroll-mt-10 ">
+                class=" lg:text-basic  xl:text-lg text-slate-400 hover:bg-slate-800/50 rounded-lg mb-32 scroll-mt-24 lg:scroll-mt-10 fade-in ">
                 <h2 class="lg:sr-only ml-4 mb-4  text-lg font-bold text-white ">ABOUT</h2>
 
 
@@ -163,7 +171,7 @@
 
 
 
-            <section id="Experience" class=" text-slate-400 sm:w-full mt-0 lg:mt-44 scroll-mt-24 lg:scroll-mt-20 ">
+            <section id="Experience" class=" text-slate-400 sm:w-full mt-0 lg:mt-44 scroll-mt-24 lg:scroll-mt-20 fade-in ">
                 <h2 class="lg:sr-only ml-4 mb-5 text-lg  font-bold text-white">EXPERIENCE</h2>
 
                 <div class=" hover:bg-slate-800/50 px-3 py-3 cursor-pointer rounded-lg">
@@ -211,7 +219,7 @@
 
 
 
-            <section id="Projects" class="scroll-mt-36  sm:w-full lg:scroll-mt-20 mt-20  lg:mt-80 mb-96 py-10 ">
+            <section id="Projects" class="scroll-mt-36  sm:w-full lg:scroll-mt-20 mt-20  lg:mt-80 mb-96 py-10 fade-in ">
                 <h2 class="lg:sr-only ml-4 mb-5 text-lg  font-bold text-white">PROJECTS</h2>
 
                 <a href="">
