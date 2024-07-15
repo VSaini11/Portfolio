@@ -40,3 +40,16 @@ document.addEventListener('scroll', function() {
     }
   });
 });
+
+var app = document.getElementById('typewriter');
+
+        var typewriter = new Typewriter(app, {
+            loop: true
+        });
+
+        typewriter.typeString('Frontend Developer')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString('Web Developer')
+            .pauseFor(2500)
+            .start();
