@@ -53,3 +53,60 @@ var app = document.getElementById('typewriter');
             .typeString('Web Developer')
             .pauseFor(2500)
             .start();
+
+
+            document.addEventListener('DOMContentLoaded', function() {
+              // Gallery configuration
+              const galleryConfig = {
+                  container: document.getElementById('gallery-container'),
+                  dotsContainer: document.getElementById('gallery-dots'),
+                  groups: document.querySelectorAll('.gallery-group'),
+                  currentGroup: 0,
+                  interval: 4000 // Time between slides in milliseconds
+              };
+          
+              // Create navigation dots
+              function createDots() {
+                  galleryConfig.groups.forEach((_, index) => {
+                      const dot = document.createElement('button');
+                      dot.className = `w-2 h-2 rounded-full transition-colors duration-200 ${
+                          index === 0 ? 'bg-green-500' : 'bg-gray-600'
+                      }`;
+                      dot.addEventListener('click', () => showGroup(index));
+                      galleryConfig.dotsContainer.appendChild(dot);
+                  });
+              }
+          
+              // Show specific group
+              function showGroup(index) {
+                  galleryConfig.currentGroup = index;
+                  galleryConfig.container.style.transform = `translateX(-${index * 100}%)`;
+                  
+                  // Update dots
+                  const dots = galleryConfig.dotsContainer.children;
+                  Array.from(dots).forEach((dot, i) => {
+                      dot.className = `w-2 h-2 rounded-full transition-colors duration-200 ${
+                          i === index ? 'bg-green-500' : 'bg-gray-600'
+                      }`;
+                  });
+          
+                  // Update opacity
+                  galleryConfig.groups.forEach((group, i) => {
+                      const images = group.querySelectorAll('div');
+                      images.forEach(img => {
+                          img.style.opacity = i === index ? '1' : '0.3';
+                      });
+                  });
+              }
+          
+              // Next group
+              function nextGroup() {
+                  const nextIndex = (galleryConfig.currentGroup + 1) % galleryConfig.groups.length;
+                  showGroup(nextIndex);
+              }
+          
+              // Initialize gallery
+              createDots();
+              setInterval(nextGroup, galleryConfig.interval);
+          });
+
