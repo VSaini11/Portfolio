@@ -110,3 +110,67 @@ var app = document.getElementById('typewriter');
               setInterval(nextGroup, galleryConfig.interval);
           });
 
+          function animateCounter(element, start, end, duration = 2000) {
+            let startTimestamp = null;
+            const totalSteps = end - start;
+          
+            const step = (timestamp) => {
+              if (!startTimestamp) startTimestamp = timestamp;
+          
+              const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+              const currentValue = Math.floor(progress * totalSteps + start);
+          
+              element.textContent = currentValue.toLocaleString();
+          
+              if (progress < 1) {
+                window.requestAnimationFrame(step);
+              } else {
+                element.textContent = end.toLocaleString();
+              }
+            };
+          
+            window.requestAnimationFrame(step);
+          }
+          
+          document.addEventListener('DOMContentLoaded', () => {
+            const counterElement = document.getElementById('followersCount');
+            const totalFollowers = 1300;
+          
+            animateCounter(counterElement, 0, totalFollowers, 2000);
+          });
+
+          function animateCounter(element, start, end, duration = 2000) {
+            let startTimestamp = null;
+            const totalSteps = end - start;
+          
+            const step = (timestamp) => {
+              if (!startTimestamp) startTimestamp = timestamp;
+          
+              const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+              const currentValue = Math.floor(progress * totalSteps + start);
+          
+              element.textContent = currentValue.toLocaleString();
+          
+              if (progress < 1) {
+                window.requestAnimationFrame(step);
+              } else {
+                element.textContent = end.toLocaleString();
+              }
+            };
+          
+            window.requestAnimationFrame(step);
+          }
+          
+          document.addEventListener('DOMContentLoaded', () => {
+            const counterElement = document.getElementById('InstagramfollowersCount');
+            const totalFollowers = 400;
+          
+            animateCounter(counterElement, 0, totalFollowers, 2000);
+          });
+
+
+
+
+    
+
+
