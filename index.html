@@ -18,6 +18,29 @@
     <title>Vaibhav Saini</title>
     <link rel="stylesheet" href="/src/output.css">
     <style>
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+          }
+      
+          .marquee {
+            display: flex;
+            align-items: center;
+            max-width: 100%;
+            height: 80px;
+            overflow:hidden ;
+            position: relative;
+          }
+      
+          .marquee-content {
+            display: flex;
+            animation: marquee 30s linear infinite;
+          }
+      
+          .marquee-content img {
+            height: 50px;
+            margin: 0 20px;
+          }
         .shade {
             background: radial-gradient(600px at 869px 595px, rgba(29, 78, 216, 0.15), transparent 80%);
 
@@ -39,7 +62,7 @@
     </style>
 </head>
 
-<body class="bg-slate-900">
+<body class="bg-slate-900 overflow-x-hidden">
 <div class="relative">   
   <div class=" shade fixed  pointer-events-none lg:absolute inset-0 z-30"></div>
     <div class="lg:flex xl:flex 2xl:flex ml-0 mr-2 lg:mx-20 pl-5 md:ml-0 sm:ml-0 md:flex-none  lg:justify-between xl:justify-between 2xl:justify-between ">
@@ -275,7 +298,7 @@
                     
                 </div>
 
-                
+               
               
 
                 
@@ -287,7 +310,22 @@
 
             </section>
 
-            <section id="Experience" class=" text-slate-400 sm:w-full mt-0 lg:mt-44 scroll-mt-24 lg:scroll-mt-20 fade-in ">
+            <div class="marquee">
+                <div class="marquee-content font-bold text-white text-lg">
+                  <img src="/javascript.svg" alt="Javascript">
+                  <img src="/css-alt.svg" alt="CSS">
+                  <img src="/html-1.svg" alt="Html5">
+                  <img src="/tailwind-css.svg" alt="Tailwindcss">
+                  <img src="/nodejs-icon.svg" alt="Nodejs">
+                  <img src="/react.svg" alt="React">
+                  <img src="/mongodb-svgrepo-com.svg" alt="MongoDB">
+                  <img src="/python.svg" alt="Python">
+                </div>
+            </div>
+
+            
+
+            <section id="Experience" class=" text-slate-400 sm:w-full mt-10 lg:mt-44 scroll-mt-24 lg:scroll-mt-20 fade-in ">
                 
             </section>
 
