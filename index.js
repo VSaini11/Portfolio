@@ -169,6 +169,119 @@ var app = document.getElementById('typewriter');
           });
 
 
+          const latestPost = {
+            title: "“ The Saturn Effect: Finding Cosmic Harmony in Gen Z’s World. ”",
+            excerpt: "In the intricate dance of our solar system, every planet has a purpose. Saturn, known for its breathtaking rings...",
+            date: "January 29, 2025",
+            link: "https://medium.com/@vaibhavsaini709/the-saturn-effect-finding-cosmic-harmony-in-gen-zs-world-273261ce3e11"
+        };
+        
+        // Function to format the date
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+        
+        // Function to create and display the blog post
+        function displayLatestPost(post) {
+            const postContainer = document.getElementById('latestPost');
+            
+            const postHTML = `
+                <div class="space-y-2">
+                    <h3 class="font-semibold text-lg text-gray-200">${post.title}</h3>
+                    <p class="text-sm text-gray-300 line-clamp-2">${post.excerpt}</p>
+                    <p class="text-xs text-gray-300">${formatDate(post.date)}</p>
+                </div>
+                <button 
+                    onclick="window.open('${post.link}', '_blank')"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-md
+                           text-sm font-medium text-gray-200
+                           hover:bg-slate-800 transition-colors duration-200
+                           flex items-center justify-center gap-2">
+                    Read on Medium
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                         class="h-4 w-4" 
+                         fill="none" 
+                         viewBox="0 0 24 24" 
+                         stroke="currentColor">
+                        <path stroke-linecap="round" 
+                              stroke-linejoin="round" 
+                              stroke-width="2" 
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                </button>
+            `;
+            
+            postContainer.innerHTML = postHTML;
+        }
+        
+        // 3D tilt effect implementation
+        function initTiltEffect() {
+            const card = document.getElementById('tiltCard');
+            const shine = document.getElementById('shine');
+            
+            // Configuration for the tilt effect
+            const config = {
+                max: 15,         // Maximum rotation angle
+                scale: 1.05,     // Hover scale factor
+                speed: 1000,     // Animation speed
+                easing: 'cubic-bezier(.03,.98,.52,.99)' // Smooth easing function
+            };
+        
+            // Handle mouse movement
+            function handleMouseMove(event) {
+                const rect = card.getBoundingClientRect();
+                
+                // Calculate mouse position relative to card center
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const mouseX = event.clientX - centerX;
+                const mouseY = event.clientY - centerY;
+                
+                // Calculate rotation angles
+                const rotateX = (mouseY / (rect.height / 2)) * -config.max;
+                const rotateY = (mouseX / (rect.width / 2)) * config.max;
+                
+                // Apply transformations
+                card.style.transform = `
+                    perspective(${config.speed}px)
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                    scale3d(${config.scale}, ${config.scale}, ${config.scale})
+                `;
+                
+                // Update shine effect
+                const shine = document.getElementById('shine');
+                shine.style.opacity = '0.15';
+                shine.style.transform = `
+                    translateX(${mouseX}px)
+                    translateY(${mouseY}px)
+                `;
+            }
+        
+            // Reset card position
+            function handleMouseLeave() {
+                card.style.transform = `
+                    perspective(${config.speed}px)
+                    rotateX(0deg)
+                    rotateY(0deg)
+                    scale3d(1, 1, 1)
+                `;
+                shine.style.opacity = '0';
+            }
+        
+            // Add event listeners
+            card.addEventListener('mousemove', handleMouseMove);
+            card.addEventListener('mouseleave', handleMouseLeave);
+        }
+        
+        // Initialize everything when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            displayLatestPost(latestPost);
+            initTiltEffect();
+        });         
+
+
 
 
     
