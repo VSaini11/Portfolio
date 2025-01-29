@@ -18,6 +18,7 @@
     <title>Vaibhav Saini</title>
     <link rel="stylesheet" href="/src/output.css">
     <style>
+        
         .transform-wrapper {
             perspective-origin: center;
         }
@@ -271,13 +272,18 @@
                 </ul>
 
                 <div class="max-w-2xl mx-auto p-6">
-                    <!-- Perspective container for 3D effect -->
                     <div class="transform-wrapper" style="perspective: 1000px;">
-                        <!-- Main card container with 3D transform capability -->
-                        <div id="tiltCard" class="bg-slate-900 rounded-lg shadow-lg p-6 transition-transform duration-200 ease-out transform-gpu">
-                            <!-- Header section with Medium logo -->
+                        <div id="tiltCard" class="bg-slate-900 rounded-lg shadow-lg p-6  transition-transform duration-200 ease-out transform-gpu">
+                            <!-- Header section with Medium logo and latest indicator -->
                             <div class="flex items-center justify-between mb-4">
-                                <h2 class="text-2xl font-bold text-gray-200">Latest on Medium</h2>
+                                <div class="flex items-center gap-3">
+                                    <h2 class="text-2xl font-bold text-gray-200">Latest on Medium</h2>
+                                    <!-- Latest indicator -->
+                                    <div class="relative flex items-center">
+                                        <div class="absolute animate-ping w-2.5 h-2.5 rounded-full bg-green-400 opacity-75"></div>
+                                        <div class="relative w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                                    </div>
+                                </div>
                                 <svg viewBox="0 0 1043.63 592.71" class="h-6 w-6">
                                     <g data-name="Layer 2">
                                         <path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94" 
@@ -286,15 +292,15 @@
                                 </svg>
                             </div>
                             
+                            <!-- Rest of the content remains the same -->
                             <p class="text-gray-200 text-sm mb-6">
-                                Sharing thoughts on technology, design, development and Philosophy Mind.
+                                Sharing thoughts on technology, design, and development
                             </p>
                 
                             <div id="latestPost" class="space-y-4">
                                 <!-- Post content will be inserted here by JavaScript -->
                             </div>
                 
-                            <!-- Add subtle lighting effect overlay -->
                             <div id="shine" class="absolute inset-0 rounded-lg pointer-events-none bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 transition-opacity duration-200"></div>
                         </div>
                     </div>
