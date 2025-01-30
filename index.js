@@ -170,10 +170,10 @@ var app = document.getElementById('typewriter');
 
 
           const latestPost = {
-            title: "“ The Saturn Effect: Finding Cosmic Harmony in Gen Z’s World. ”",
-            excerpt: "In the intricate dance of our solar system, every planet has a purpose. Saturn, known for its breathtaking rings...",
-            date: "January 29, 2025",
-            link: "https://medium.com/@vaibhavsaini709/the-saturn-effect-finding-cosmic-harmony-in-gen-zs-world-273261ce3e11"
+            title: "“ The Lord Shiva Principle: Managing Chaos and Understanding Relationships ”",
+            excerpt: "In my previous blog, The Saturn Effect, I discussed how Saturn stabilizes Jupiter’s immense gravitational force, ",
+            date: "January 30, 2025",
+            link: "https://medium.com/@vaibhavsaini709/the-lord-shiva-principle-managing-chaos-and-understanding-relationships-578939e3cbac"
         };
         
         // Function to format the date
